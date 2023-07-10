@@ -1,11 +1,10 @@
 from flask import jsonify, request, Blueprint
-
 collatz_bp = Blueprint('collatz', __name__)
 
 @collatz_bp.route('/collatz', methods=['GET', 'POST'])
 def collatz():
   if request.method == 'GET':
-    return jsonify({"wikipedia": "https://en.wikipedia.org/wiki/Collatz_conjecture"})
+    return jsonify({"help": "https://en.wikipedia.org/wiki/Collatz_conjecture"})
   elif request.method == 'POST':
     try:
       start: int = request.get_json()["start"]

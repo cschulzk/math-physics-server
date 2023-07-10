@@ -5,7 +5,7 @@ exponentiate_bp = Blueprint('exponentiate', __name__)
 @exponentiate_bp.route('/exponentiate', methods=['GET', 'POST'])
 def exponentiate():
   if request.method == 'GET':
-    return jsonify({"wikipedia": "https://en.wikipedia.org/wiki/Exponentiation"})
+    return jsonify({"help": "https://en.wikipedia.org/wiki/Exponentiation"})
   elif request.method == 'POST':
     try:
       base: float | int = request.get_json()["base"]

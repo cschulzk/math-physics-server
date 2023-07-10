@@ -3,17 +3,14 @@ This app is the begining of a longer term project to build an app for calculatin
 
 There are size limits put on the arguements that are accepted in order to make the computation times small for even small computers. These limits can be adjusted to match the infrastructure the app is running on.
 
-# Functions to add
- - Temperature in a solid rod of homogenous material.
- - Trigonometric functions
- - Fibonacci sequence (return first n members of the sequence; return the nth member of the sequence)
- - Calucate the area of regular shapes
+# Running the server
+Set up a virtual environment in your project directory and then run `pip install Flask`. This is the only dependency required for the time. 
+After installing the dependencies you can run the server with `py flask_app.py`. This will automatically run Flask in debug mode.
 
-# Features to add
-  - Make a root route that returns a 'directory' of the operations that are available
-  - Update the opeartions root routes to provide instructions on how to use the route, in addition to the link with explanation of the operation.
-  - Move request parameters to the URL to make the app easier to use for a wider audience
-  - Add file transfer functions
+The Flask website discusses a number of options for setting up a production servers: https://flask.palletsprojects.com/en/2.3.x/deploying/. I've used PythonAnwhere for deploying a sample version of the app at: http://cschulzke.pythonanywhere.com/. Check it out!
 
-# Dependencies
-After setting up your virtual environment, run `pip install Flask`. This is currently the only dependency.
+# Guidelines for new functions
+## Selecting branch
+All functions should be listed under the route for their particular branch of mathematics or physics. For example, the functions for exponentiation live under the 'arithmetic' branch and have the route '/arithmetic/exponentiate'
+## GET and POST route
+Every functions should have both a GET and POST route. The GET route should return instructions for how to use that route as well as any applicable precautions (let users now the limits on inputs). The POST route should accept any necessary parameters and then return the result of the calculation.
