@@ -5,5 +5,7 @@ arithmetic_bp.register_blueprint(exponentiate_bp)
 
 @arithmetic_bp.route('/', methods=['GET'])
 def arithmetic():
-    return jsonify({"help": "This is how to use this route."})
+    return jsonify({
+        "message": "Welcome to the arithmetic route.",
+    })
     

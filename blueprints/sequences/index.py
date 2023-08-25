@@ -5,5 +5,7 @@ sequences_bp.register_blueprint(collatz_bp)
 
 @sequences_bp.route('/', methods=['GET'])
 def sequences():
-    return jsonify({"help": "This is how to use this route."})
+    return jsonify({
+        "message": "Welcome to the sequences route.",
+    })
     
