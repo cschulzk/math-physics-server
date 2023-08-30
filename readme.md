@@ -4,6 +4,8 @@ This app is the begining of a longer term project to build an app for calculatin
 There are size limits put on the arguements that are accepted in order to make the computation times small for even small computers. These limits can be adjusted to match the infrastructure the app is running on.
 
 # Running the server
+If you're new to Flask, checkout the [official Flask tutorial](https://flask.palletsprojects.com/en/2.3.x/tutorial/). 
+
 Set up a virtual environment in your project directory and then run `pip install Flask`. This is the only dependency required for the time. 
 After installing the dependencies you can run the server with `py flask_app.py`. This will automatically run Flask in debug mode.
 
