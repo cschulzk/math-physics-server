@@ -1,7 +1,5 @@
 from flask import Blueprint, jsonify
-from blueprints.sequences.collatz import collatz_bp
 home_bp = Blueprint('home', __name__, url_prefix='')
-home_bp.register_blueprint(collatz_bp)
 
 @home_bp.route('/', methods=['GET'])
 def hello():
@@ -13,6 +11,15 @@ def hello():
             },
             "sequences": {
                 "collatz": {}
+            },
+            "statistics": {
+                "basic": {
+                  "mean": {},
+                  "median": {},
+                  "range": {},
+                  "max": {},
+                  "min": {}                    
+                } 
             }
         }
     })
